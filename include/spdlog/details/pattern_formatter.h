@@ -19,7 +19,7 @@ namespace spdlog {
 namespace details {
 
 // padding information.
-struct padding_info
+struct SPDLOG_EXPORT padding_info
 {
     enum pad_side
     {
@@ -42,7 +42,7 @@ struct padding_info
     const pad_side side_ = left;
 };
 
-class flag_formatter
+class SPDLOG_EXPORT flag_formatter
 {
 public:
     explicit flag_formatter(padding_info padinfo)
@@ -58,7 +58,7 @@ protected:
 
 } // namespace details
 
-class pattern_formatter final : public formatter
+class SPDLOG_EXPORT pattern_formatter final : public formatter
 {
 public:
     explicit pattern_formatter(
